@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Nexa Digital — Innovative software and digital solutions for modern businesses." />
+  <title>Nexa Digital — Software & Digital Solutions</title>
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+
+   <script>
+    (function () {
+      try {
+        var saved = localStorage.getItem("nexa-theme");
+        var theme = saved;
+        if (theme !== "dark" && theme !== "light") {
+          // No saved preference — follow the system
+          theme = window.matchMedia("(prefers-color-scheme: dark)").matches
+            ? "dark"
+            : "light";
+        }
+        document.documentElement.setAttribute("data-theme", theme);
+      } catch (e) {
+        // localStorage blocked / unavailable — silently fall back to light
+        document.documentElement.setAttribute("data-theme", "light");
+      }
+    })();
+  </script>
+
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <!-- ================= HEADER / NAVBAR ================= -->
+  <header class="navbar" id="navbar">
+    <div class="container nav-container">
+      <a href="#" class="logo" aria-label="Nexa Digital Home">
+        <span class="logo-mark">N</span>
+        <span class="logo-text">Nexa<span>Digital</span></span>
+      </a>
+
+      <nav class="nav-links" id="navLinks" aria-label="Main navigation">
+        <a href="#home" data-i18n="nav_home">Home</a>
+        <a href="#services" data-i18n="nav_services">Services</a>
+        <a href="#about" data-i18n="nav_about">About</a>
+        <a href="#projects" data-i18n="nav_projects">Projects</a>
+        <a href="#testimonials" data-i18n="nav_testimonials">Testimonials</a>
+        <a href="#contact" data-i18n="nav_contact">Contact</a>
+      </nav>
+
+      <div class="nav-actions">
+        <button class="icon-btn" id="langToggle" aria-label="Switch language" title="Switch language">
+          <i class="fa-solid fa-globe"></i>
+          <span id="langLabel">AR</span>
+        </button>
+
+        <button class="icon-btn" id="themeToggle" aria-label="Toggle theme" title="Toggle theme">
+          <i class="fa-solid fa-moon"></i>
+        </button>
+
+        <button class="icon-btn menu-btn" id="menuBtn" aria-label="Open menu" aria-expanded="false">
+          <i class="fa-solid fa-bars"></i>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- ================= HERO ================= -->
+  <section class="hero" id="home">
+    <div class="hero-bg" aria-hidden="true">
+      <div class="blob blob-1"></div>
+      <div class="blob blob-2"></div>
+      <div class="grid-overlay"></div>
+    </div>
+
+    <div class="container hero-container">
+      <div class="hero-content">
+        <span class="badge" data-i18n="hero_badge">✦ Innovative Digital Agency</span>
+        <h1 data-i18n="hero_title">
+          We Build <span class="gradient-text">Digital Products</span> That Move Business Forward
+        </h1>
+        <p class="hero-sub" data-i18n="hero_sub">
+          From concept to launch, Nexa Digital delivers scalable software, modern web experiences, and
+          design systems that help ambitious teams ship faster and grow smarter.
+        </p>
+
+        <div class="hero-actions">
+          <a href="#contact" class="btn btn-primary" data-i18n="hero_cta1">Start a Project</a>
+          <a href="#projects" class="btn btn-ghost" data-i18n="hero_cta2">View Our Work</a>
+        </div>
+
+        <div class="hero-stats">
+          <div class="hero-stat"><strong>120+</strong><span data-i18n="hero_stat1">Projects Delivered</span></div>
+          <div class="hero-stat"><strong>98%</strong><span data-i18n="hero_stat2">Client Retention</span></div>
+          <div class="hero-stat"><strong>15+</strong><span data-i18n="hero_stat3">Countries Served</span></div>
+        </div>
+      </div>
+
+      <div class="hero-visual" aria-hidden="true">
+        <div class="card-mock">
+          <div class="card-header">
+            <span class="dot red"></span><span class="dot yellow"></span><span class="dot green"></span>
+          </div>
+          <div class="card-body">
+            <div class="code-line"><span class="tag">&lt;div</span> <span class="attr">class</span>=<span class="str">"future"</span><span class="tag">&gt;</span></div>
+            <div class="code-line indent"><span class="tag">&lt;h1&gt;</span>Build. Ship. Grow.<span class="tag">&lt;/h1&gt;</span></div>
+            <div class="code-line"><span class="tag">&lt;/div&gt;</span></div>
+            <div class="bars">
+              <span style="height:40%"></span><span style="height:65%"></span>
+              <span style="height:85%"></span><span style="height:55%"></span>
+              <span style="height:95%"></span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= SERVICES ================= -->
+  <section class="section" id="services">
+    <div class="container">
+      <div class="section-head">
+        <span class="eyebrow" data-i18n="services_eyebrow">What We Do</span>
+        <h2 data-i18n="services_title">Services Built for Modern Teams</h2>
+        <p data-i18n="services_sub">End-to-end capabilities that take your product from idea to impact.</p>
+      </div>
+
+      <div class="grid grid-3">
+        <article class="card">
+          <div class="card-icon"><i class="fa-solid fa-code"></i></div>
+          <h3 data-i18n="srv1_title">Web Development</h3>
+          <p data-i18n="srv1_desc">Fast, accessible, and SEO-friendly web apps built with modern standards.</p>
+        </article>
+
+        <article class="card">
+          <div class="card-icon"><i class="fa-solid fa-mobile-screen"></i></div>
+          <h3 data-i18n="srv2_title">Mobile Apps</h3>
+          <p data-i18n="srv2_desc">Cross-platform iOS and Android apps with native-grade performance.</p>
+        </article>
+
+        <article class="card">
+          <div class="card-icon"><i class="fa-solid fa-pen-ruler"></i></div>
+          <h3 data-i18n="srv3_title">UI / UX Design</h3>
+          <p data-i18n="srv3_desc">Human-centered interfaces that turn visitors into loyal customers.</p>
+        </article>
+
+        <article class="card">
+          <div class="card-icon"><i class="fa-solid fa-cloud"></i></div>
+          <h3 data-i18n="srv4_title">Cloud & DevOps</h3>
+          <p data-i18n="srv4_desc">Scalable infrastructure, CI/CD pipelines, and 24/7 monitoring.</p>
+        </article>
+
+        <article class="card">
+          <div class="card-icon"><i class="fa-solid fa-chart-line"></i></div>
+          <h3 data-i18n="srv5_title">Digital Marketing</h3>
+          <p data-i18n="srv5_desc">Data-driven campaigns that grow reach and revenue.</p>
+        </article>
+
+        <article class="card">
+          <div class="card-icon"><i class="fa-solid fa-shield-halved"></i></div>
+          <h3 data-i18n="srv6_title">Cybersecurity</h3>
+          <p data-i18n="srv6_desc">Audit, harden, and protect your digital assets from day one.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= ABOUT / WHY US ================= -->
+  <section class="section section-alt" id="about">
+    <div class="container about-container">
+      <div class="about-text">
+        <span class="eyebrow" data-i18n="about_eyebrow">Why Choose Us</span>
+        <h2 data-i18n="about_title">A Partner, Not Just a Vendor</h2>
+        <p data-i18n="about_desc">
+          We combine strategy, design, and engineering under one roof. That means fewer hand-offs,
+          faster feedback loops, and a product that feels whole — not stitched together.
+        </p>
+
+        <ul class="check-list">
+          <li><i class="fa-solid fa-circle-check"></i><span data-i18n="about_f1">Senior team on every project</span></li>
+          <li><i class="fa-solid fa-circle-check"></i><span data-i18n="about_f2">Transparent weekly reporting</span></li>
+          <li><i class="fa-solid fa-circle-check"></i><span data-i18n="about_f3">Post-launch support included</span></li>
+          <li><i class="fa-solid fa-circle-check"></i><span data-i18n="about_f4">Fixed scope. No surprises.</span></li>
+        </ul>
+
+        <a href="#contact" class="btn btn-primary" data-i18n="about_cta">Talk to Us</a>
+      </div>
+
+      <div class="about-visual">
+        <div class="about-card">
+          <i class="fa-solid fa-rocket"></i>
+          <h4 data-i18n="about_card_title">Launch in Weeks</h4>
+          <p data-i18n="about_card_desc">Our battle-tested process gets MVPs into users' hands faster.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= STATISTICS ================= -->
+  <section class="section stats-section">
+    <div class="container">
+      <div class="grid grid-4">
+        <div class="stat-box">
+          <h3 data-counter="250">0</h3><span>+</span>
+          <p data-i18n="stats1">Projects Completed</p>
+        </div>
+        <div class="stat-box">
+          <h3 data-counter="180">0</h3><span>+</span>
+          <p data-i18n="stats2">Happy Clients</p>
+        </div>
+        <div class="stat-box">
+          <h3 data-counter="12">0</h3><span>+</span>
+          <p data-i18n="stats3">Years Experience</p>
+        </div>
+        <div class="stat-box">
+          <h3 data-counter="45">0</h3><span>+</span>
+          <p data-i18n="stats4">Team Members</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= PROJECTS ================= -->
+  <section class="section" id="projects">
+    <div class="container">
+      <div class="section-head">
+        <span class="eyebrow" data-i18n="proj_eyebrow">Portfolio</span>
+        <h2 data-i18n="proj_title">Selected Projects</h2>
+        <p data-i18n="proj_sub">A glimpse of what we've shipped for clients worldwide.</p>
+      </div>
+
+      <div class="grid grid-3">
+        <article class="project">
+          <div class="project-thumb thumb-1"><i class="fa-solid fa-cart-shopping"></i></div>
+          <div class="project-body">
+            <span class="tag-pill" data-i18n="proj1_tag">E-commerce</span>
+            <h3 data-i18n="proj1_title">Orbit Store</h3>
+            <p data-i18n="proj1_desc">Headless commerce platform serving 40k+ monthly users.</p>
+          </div>
+        </article>
+
+        <article class="project">
+          <div class="project-thumb thumb-2"><i class="fa-solid fa-heart-pulse"></i></div>
+          <div class="project-body">
+            <span class="tag-pill" data-i18n="proj2_tag">HealthTech</span>
+            <h3 data-i18n="proj2_title">VitaCare App</h3>
+            <p data-i18n="proj2_desc">Patient management system used in 30+ clinics.</p>
+          </div>
+        </article>
+
+        <article class="project">
+          <div class="project-thumb thumb-3"><i class="fa-solid fa-chart-pie"></i></div>
+          <div class="project-body">
+            <span class="tag-pill" data-i18n="proj3_tag">FinTech</span>
+            <h3 data-i18n="proj3_title">PayFlow Dashboard</h3>
+            <p data-i18n="proj3_desc">Real-time analytics for a global payments provider.</p>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= TESTIMONIALS ================= -->
+  <section class="section section-alt" id="testimonials">
+    <div class="container">
+      <div class="section-head">
+        <span class="eyebrow" data-i18n="test_eyebrow">Testimonials</span>
+        <h2 data-i18n="test_title">Loved by Founders & Teams</h2>
+      </div>
+
+      <div class="grid grid-3">
+        <blockquote class="testimonial">
+          <p data-i18n="test1_text">"Nexa Digital shipped our MVP in 6 weeks. Their process was clear, and the result exceeded expectations."</p>
+          <footer>
+            <div class="avatar">S</div>
+            <div>
+              <strong data-i18n="test1_name">Sarah Mitchell</strong>
+              <span data-i18n="test1_role">CEO, Orbit Store</span>
+            </div>
+          </footer>
+        </blockquote>
+
+        <blockquote class="testimonial">
+          <p data-i18n="test2_text">"The most organized agency we've worked with. Weekly demos kept everything on track."</p>
+          <footer>
+            <div class="avatar">A</div>
+            <div>
+              <strong data-i18n="test2_name">Ahmed Khalid</strong>
+              <span data-i18n="test2_role">CTO, VitaCare</span>
+            </div>
+          </footer>
+        </blockquote>
+
+        <blockquote class="testimonial">
+          <p data-i18n="test3_text">"Their design system saved us months of work. Everything is consistent and scalable."</p>
+          <footer>
+            <div class="avatar">L</div>
+            <div>
+              <strong data-i18n="test3_name">Layla Hassan</strong>
+              <span data-i18n="test3_role">Head of Product, PayFlow</span>
+            </div>
+          </footer>
+        </blockquote>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= CTA ================= -->
+  <section class="section cta-section">
+    <div class="container">
+      <div class="cta-box">
+        <h2 data-i18n="cta_title">Ready to Build Something Great?</h2>
+        <p data-i18n="cta_desc">Let's talk about your idea. Free 30-minute consultation, no strings attached.</p>
+        <a href="#contact" class="btn btn-primary" data-i18n="cta_btn">Book a Free Call</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= CONTACT ================= -->
+  <section class="section" id="contact">
+    <div class="container">
+      <div class="section-head">
+        <span class="eyebrow" data-i18n="contact_eyebrow">Contact</span>
+        <h2 data-i18n="contact_title">Let's Work Together</h2>
+      </div>
+
+      <form class="contact-form" id="contactForm" novalidate>
+        <div class="form-row">
+          <div class="form-group">
+            <label for="name" data-i18n="form_name">Full Name</label>
+            <input type="text" id="name" name="name" required data-i18n-placeholder="form_name_ph" placeholder="John Doe" />
+          </div>
+          <div class="form-group">
+            <label for="email" data-i18n="form_email">Email</label>
+            <input type="email" id="email" name="email" required data-i18n-placeholder="form_email_ph" placeholder="john@example.com" />
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="subject" data-i18n="form_subject">Subject</label>
+          <input type="text" id="subject" name="subject" required data-i18n-placeholder="form_subject_ph" placeholder="Project inquiry" />
+        </div>
+
+        <div class="form-group">
+          <label for="message" data-i18n="form_message">Message</label>
+          <textarea id="message" name="message" rows="5" required data-i18n-placeholder="form_message_ph" placeholder="Tell us about your project..."></textarea>
+        </div>
+
+        <button type="submit" class="btn btn-primary btn-block" data-i18n="form_send">Send Message</button>
+        <p class="form-status" id="formStatus" role="status" aria-live="polite"></p>
+      </form>
+    </div>
+  </section>
+
+  <!-- ================= FOOTER ================= -->
+  <footer class="footer">
+    <div class="container footer-container">
+      <div class="footer-brand">
+        <a href="#" class="logo">
+          <span class="logo-mark">N</span>
+          <span class="logo-text">Nexa<span>Digital</span></span>
+        </a>
+        <p data-i18n="footer_desc">Software & digital solutions for modern businesses.</p>
+                <!--
+          Social links are intentionally disabled for the demo.
+          Replace `aria-disabled="true"` with real URLs when ready.
+          Using <span> instead of <a href="#"> avoids fake navigation.
+        -->
+        <div class="socials" aria-label="Social links (coming soon)">
+          <span class="social-link is-disabled" role="link" aria-disabled="true" title="Coming soon">
+            <i class="fa-brands fa-x-twitter" aria-hidden="true"></i>
+            <span class="sr-only">Twitter (coming soon)</span>
+          </span>
+          <span class="social-link is-disabled" role="link" aria-disabled="true" title="Coming soon">
+            <i class="fa-brands fa-linkedin-in" aria-hidden="true"></i>
+            <span class="sr-only">LinkedIn (coming soon)</span>
+          </span>
+          <span class="social-link is-disabled" role="link" aria-disabled="true" title="Coming soon">
+            <i class="fa-brands fa-github" aria-hidden="true"></i>
+            <span class="sr-only">GitHub (coming soon)</span>
+          </span>
+        </div>
+      </div>
+
+      <div class="footer-col">
+        <h4 data-i18n="footer_company">Company</h4>
+        <a href="#about" data-i18n="nav_about">About</a>
+        <a href="#services" data-i18n="nav_services">Services</a>
+        <a href="#projects" data-i18n="nav_projects">Projects</a>
+        <a href="#contact" data-i18n="nav_contact">Contact</a>
+      </div>
+
+        <div class="footer-col">
+        <h4 data-i18n="footer_contact">Get in Touch</h4>
+        <p>
+          <i class="fa-solid fa-briefcase" aria-hidden="true"></i>
+          <span data-i18n="footer_available">Available for freelance projects</span>
+        </p>
+        <p>
+          <i class="fa-solid fa-comment-dots" aria-hidden="true"></i>
+          <span data-i18n="footer_contact_via">Contact me through the platform</span>
+        </p>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p>
+        © <span id="currentYear"></span>
+        <span data-i18n="footer_rights_short">Nexa Digital. All rights reserved.</span>
+      </p>
+    </div>
+  </footer>
+
+  <script src="js/script.js"></script>
+</body>
+</html>
